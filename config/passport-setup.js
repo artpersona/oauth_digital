@@ -26,7 +26,7 @@ passport.deserializeUser((id, done)=>{
 passport.use(
     new GoogleStrategy({
         // options for the google strat
-        callbackURL: '/auth/google/callback',
+        callbackURL: 'https://perez-oauth.herokuapp.com/auth/google/callback',
         clientID: keys.google.clientID,
         clientSecret: keys.google.clientSecret
     }, (accessToken, refreshToken, profile, done)=>{
@@ -158,7 +158,7 @@ passport.use(new GitHubStrategy({
 passport.use(new LinkedInStrategy({
     clientID: keys.linkedin.clientID,
     clientSecret: keys.linkedin.clientSecret,
-    callbackURL: "/auth/linkedin/callback",
+    callbackURL: "https://perez-oauth.herokuapp.com/auth/linkedin/callback",
     scope: ['r_emailaddress', 'r_liteprofile'],
   }, function(accessToken, refreshToken, profile, done) {
       console.log(profile)
