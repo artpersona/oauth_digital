@@ -124,7 +124,7 @@ passport.use(new FacebookStrategy({
 passport.use(new GitHubStrategy({
     clientID: keys.github.clientID,
     clientSecret: keys.github.clientSecret,
-    callbackURL: "/auth/github/callback"
+    callbackURL: "https://perez-oauth.herokuapp.com/auth/github/callback"
   },
   function(accessToken, refreshToken, profile, cb) {
       console.log(profile)
