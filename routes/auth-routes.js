@@ -1,8 +1,21 @@
 const router = require('express').Router();
 const passport = require('passport');
 
+const authCheck = (req, res, next)=>{
+    console.log("*************************");
+    console.log(req.user);
+    if(!req.user){
+        // User is not logged in
+        next();
+    }
+    else{
+        // User is logged in
+        res.redirect('/profile');
+    }
+}
+
 // auth login
-router.get('/login',(req, res)=>{
+router.get('/login',authCheck,(req, res)=>{
     res.render('login', {user: req.user});
 });
 
@@ -33,6 +46,9 @@ router.get('/linkedin',
   passport.authenticate('linkedin', { state: 'SOME STATE'  }),
   function(req, res){
   });
+
+router.get('/spotify', passport.authenticate('spotify'), function(req, res) {
+  });
   
 // callback route for google to redirect to
 router.get('/google/callback',passport.authenticate('google'),(req, res)=>{
@@ -52,6 +68,10 @@ router.get('/github/callback',passport.authenticate('github'),(req, res)=>{
 router.get('/linkedin/callback',passport.authenticate('linkedin'),(req, res)=>{
     //res.send('you reached the callback URI');
     //res.send(req.user);    
+    res.redirect('/profile/');
+});
+
+router.get('/spotify/callback',passport.authenticate('spotify'),(req, res)=>{
     res.redirect('/profile/');
 });
 

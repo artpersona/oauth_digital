@@ -247,13 +247,13 @@ svg {
 }
 
 #twitter-connect {
-  background: rgb(255, 255, 255) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/twitter.png') no-repeat scroll 5px 1px / 45px 45px padding-box border-box;
-  border: 1px solid rgb(85, 172, 238);
+  background: rgb(255, 255, 255) url('https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg?sanitize=true') no-repeat scroll 13px 0px / 28px 45px padding-box border-box;
+  border: 1px solid rgb(86, 223, 104);
 }
 
 #twitter-connect:hover {
-  border-color: rgb(85, 172, 238);
-  background: rgb(85, 172, 238) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/twitter-white.png') no-repeat scroll 5px 1px / 45px 45px padding-box border-box;
+  border-color: rgb(18, 156, 18);
+  background: rgb(30,215,96) url('https://raw.githubusercontent.com/encharm/Font-Awesome-SVG-PNG/master/white/svg/spotify.svg?sanitize=true') no-repeat scroll 13px 0px / 28px 45px padding-box border-box;
   -webkit-transition: all .8s ease-out;
   -moz-transition: all .3s ease;
   -ms-transition: all .3s ease;
@@ -263,7 +263,7 @@ svg {
 
 #twitter-connect span {
   box-sizing: border-box;
-  color: rgb(85, 172, 238);
+  color: rgb(18, 156, 18);
   cursor: pointer;
   text-align: center;
   text-transform: uppercase;

@@ -15,6 +15,10 @@ module.exports = {
         clientID:"78c8kpbnqrfawm",
         clientSecret:"wNit9lDPeFcyIPLJ"
     },
+    spotify:{
+        clientID:"f724d6781ce34a1b8475e47554dd23ce",
+        clientSecret:"f20269af671d4a78911be86d912f16b8"
+    },
     postgresdb:{
         user:"nhrxrfiinbstfa",
         host:"ec2-174-129-214-193.compute-1.amazonaws.com",
