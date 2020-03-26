@@ -134,10 +134,8 @@ svg {
 }
 
 .login-box2 {
-
-  padding-top: -30px;
   max-width: 480px;
-  margin: 25vh auto;
+  margin: 15vh auto;
   text-align: center;
   letter-spacing: 1px;
   position: relative;
