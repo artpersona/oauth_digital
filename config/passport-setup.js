@@ -211,7 +211,7 @@ passport.use(new LinkedInStrategy({
       {
         clientID: keys.spotify.clientID,
         clientSecret: keys.spotify.clientSecret,
-        callbackURL: "http://localhost:5000/auth/spotify/callback"
+        callbackURL: "https://perez-oauth.herokuapp.com/auth/spotify/callback"
         // https://perez-oauth.herokuapp.com/auth/spotify/callback
       },
       function(accessToken, refreshToken, expires_in, profile, done) {
