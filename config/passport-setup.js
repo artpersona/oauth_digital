@@ -27,7 +27,7 @@ passport.deserializeUser((id, done)=>{
 passport.use(
     new GoogleStrategy({
         // options for the google strat
-        callbackURL: 'https://group7-oauth.cf/auth/google/callback',
+        callbackURL: 'http://group7-oauth.cf/auth/google/callback',
         clientID: keys.google.clientID,
         clientSecret: keys.google.clientSecret
     }, (accessToken, refreshToken, profile, done)=>{
@@ -90,7 +90,7 @@ passport.use(
 passport.use(new FacebookStrategy({
     clientID: keys.facebook.clientID,
     clientSecret: keys.facebook.clientSecret,
-    callbackURL: "https://group7-oauth.cf/auth/facebook/callback",
+    callbackURL: "http://group7-oauth.cf/auth/facebook/callback",
     profileFields: ['id', 'displayName', 'photos', 'email']
   },
   function(accessToken, refreshToken, profile, cb) { 
@@ -125,7 +125,7 @@ passport.use(new FacebookStrategy({
 passport.use(new GitHubStrategy({
     clientID: keys.github.clientID,
     clientSecret: keys.github.clientSecret,
-    callbackURL: "https://group7-oauth.cf/auth/github/callback"
+    callbackURL: "http://group7-oauth.cf/auth/github/callback"
   },
   function(accessToken, refreshToken, profile, cb) {
       console.log(profile)
@@ -159,7 +159,7 @@ passport.use(new GitHubStrategy({
 passport.use(new LinkedInStrategy({
     clientID: keys.linkedin.clientID,
     clientSecret: keys.linkedin.clientSecret,
-    callbackURL: "https://group7-oauth.cf/auth/linkedin/callback",
+    callbackURL: "http://group7-oauth.cf/auth/linkedin/callback",
     scope: ['r_emailaddress', 'r_liteprofile'],
   }, function(accessToken, refreshToken, profile, done) {
       console.log(profile)
